@@ -1,13 +1,69 @@
+/* Reset básico para garantir consistência entre navegadores */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos gerais do body */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   background-color: #f4f4f4;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   height: 100vh;
   margin: 0;
 }
 
+/* Estilização do Header */
+header {
+  background: #2c3e50;
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background: #1abc9c;
+  color: #2c3e50;
+}
+
+/* Ajuste para garantir espaço abaixo do header */
+main {
+  margin-top: 80px;
+}
+
+/* Estilização da carta */
 .carta {
   background: #fff;
   padding: 20px;
@@ -15,11 +71,13 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   text-align: left;
+  margin-top: 20px;
 }
 
 h1 {
   text-align: center;
   font-size: 24px;
+  margin-bottom: 10px;
 }
 
 p {
@@ -31,4 +89,21 @@ p {
   margin-top: 20px;
   text-align: right;
   font-weight: bold;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav ul li a {
+    display: block;
+  }
+
+  .carta {
+    width: 90%;
+    padding: 15px;
+  }
 }
