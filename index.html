@@ -1,39 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carta do Leitor</title>
     <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="https://schlorke.github.io/Lobo-Guara/" id="lobo-link">Lobo-Guará</a></li>
-                <li><a href="https://schlorke.github.io/Carta/" id="carta-link">Carta</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li>
+            <a href="https://schlorke.github.io/Lobo-Guara/" id="lobo-link"
+              >Lobo-Guará</a
+            >
+          </li>
+          <li>
+            <a href="https://schlorke.github.io/Carta/" id="carta-link"
+              >Carta</a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
-
     <div class="carta">
-        <h1>Carta do Leitor</h1>
-        <p><strong>São Paulo, 22 de novembro de 2008.</strong></p>
+      <h1>Carta do Leitor</h1>
+      <p><strong>São Paulo, 22 de novembro de 2008.</strong></p>
 
-        <p>À revista Veja,</p>
+      <p>À revista Veja,</p>
 
-        <p>
-            Gostaria de parabenizar a equipe de redação pela excelente entrevista.
-            Eu, como homem e responsável pelo sustento do lar, concordo plenamente
-            com os argumentos apresentados pelo historiador Van Creveld. Nós homens
-            carregamos nos ombros uma carga imensa, seja por motivos de ordem
-            financeira ou familiar. E, por isso, com certeza, sofremos muito mais
-            com o estresse do que as mulheres que desfrutam de paz e tranquilidade
-            em seus lares.
-        </p>
+      <p>
+        Gostaria de parabenizar a equipe de redação pela excelente entrevista.
+        Eu, como homem e responsável pelo sustento do lar, concordo plenamente
+        com os argumentos apresentados pelo historiador Van Creveld. Nós homens
+        carregamos nos ombros uma carga imensa, seja por motivos de ordem
+        financeira ou familiar. E, por isso, com certeza, sofremos muito mais
+        com o estresse do que as mulheres que desfrutam de paz e tranquilidade
+        em seus lares.
+      </p>
 
-        <p class="assinatura">Atenciosamente,<br />José Antônio Souza</p>
+      <p class="assinatura">Atenciosamente,<br />José Antônio Souza</p>
     </div>
-</body>
+    <script>
+      // Captura a URL atual e destaca o link correto no menu
+      document.addEventListener("DOMContentLoaded", function () {
+        const links = document.querySelectorAll("nav ul li a");
+        const currentURL = window.location.href;
+
+        links.forEach((link) => {
+          if (currentURL.includes(link.getAttribute("href"))) {
+            link.classList.add("active");
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
