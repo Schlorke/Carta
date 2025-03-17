@@ -97,7 +97,13 @@ p {
   text-align: right;
   font-weight: bold;
 }
-
+footer {
+  width: 100%;
+  padding: 10px;
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+}
 /* Responsividade para telas menores */
 @media (max-width: 600px) {
   nav ul {
