@@ -63,11 +63,11 @@ main {
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-top: 90px;
+  margin: 5rem 0 5rem 0;
   width: 100%;
+  height: 100%;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* Controla o overflow */
 }
 
 /* Estilização da carta */
@@ -78,7 +78,7 @@ main {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   text-align: left;
-  margin-top: 20px;
+  margin: 20px 0 20px;
 }
 
 h1 {
